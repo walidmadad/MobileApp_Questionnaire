@@ -35,9 +35,13 @@ public class MainActivity extends AppCompatActivity {
 
                 String date = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
                 String time = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
-                authentification a1 = new authentification(unNom,unPrenom,date,time);
+
 
                 Intent intent = new Intent(MainActivity.this, Formulaire.class);
+                intent.putExtra("nom", unNom);
+                intent.putExtra("prenom", unPrenom);
+                intent.putExtra("date", date);
+                intent.putExtra("time", time);
                 startActivity(intent);
 
             }

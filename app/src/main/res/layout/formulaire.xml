@@ -3,120 +3,127 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Formulaire">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="60dp"
-        android:text="Formulaire de questions"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="1275dp"
+        android:layout_height="800dp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="0dp">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="64dp"
-        android:text="Question 1 "
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="100dp"
-        android:text="Question 2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            <TextView
+                android:id="@+id/bjrView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Bonjour " />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="96dp"
-        android:text="Question 3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="508dp"
+                android:layout_marginTop="104dp"
+                android:text="Formulaire de questions"
+                android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="108dp"
-        android:text="Question 4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            <TextView
+                android:id="@+id/genre"
+                android:layout_width="713dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="252dp"
+                android:layout_marginTop="50dp"
+                android:text="Genre"
+                android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="310dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            <RadioGroup
+                android:id="@+id/genderGroupe"
+                android:layout_width="482dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="288dp">
 
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="310dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="148dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                <RadioButton
+                    android:id="@+id/Homme"
+                    android:layout_width="122dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Homme" />
 
-    <EditText
-        android:id="@+id/editTextText3"
-        android:layout_width="310dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="268dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                <RadioButton
+                    android:id="@+id/Femme"
+                    android:layout_width="122dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="28dp"
+                    android:text="Femme" />
 
-    <EditText
-        android:id="@+id/editTextText4"
-        android:layout_width="310dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="400dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            </RadioGroup>
 
-    <Button
-        android:id="@+id/btn_valider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="40dp"
-        android:text="Valider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="703dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="256dp"
+                android:layout_marginTop="50dp"
+                android:text="Age"
+                android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Bonjour "
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <RadioGroup
+                android:id="@+id/ageGroupe"
+                android:layout_width="483dp"
+                android:layout_height="158dp"
+                android:layout_marginStart="288dp">
+
+                <RadioButton
+                    android:layout_width="122dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="16-17" />
+
+                <RadioButton
+                    android:layout_width="122dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="28dp"
+                    android:text="18-25" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="50dp"
+                android:text="Ville d'habitation"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ville"
+                android:layout_width="674dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="288dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btn_valider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="584dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginBottom="50dp"
+                android:text="Valider" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
