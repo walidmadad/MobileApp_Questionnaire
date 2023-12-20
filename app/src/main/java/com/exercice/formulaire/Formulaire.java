@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -12,29 +13,53 @@ import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-@RequiresApi(api = 26)
+@RequiresApi(api = 23)
 public class Formulaire extends AppCompatActivity {
-    private String getGenderSelected(){
-        RadioGroup gender = (RadioGroup)findViewById(R.id.genderGroupe);
+    private String getGenderSelected() {
+        RadioGroup gender = findViewById(R.id.genderGroupe);
         int id = gender.getCheckedRadioButtonId();
-        RadioButton genderSelected = (RadioButton) findViewById(id);
-        String strGender = (String) genderSelected.getText();
 
-        return strGender;
+        if (id != -1) {
+            RadioButton genderSelected = findViewById(id);
+            return genderSelected.getText().toString();
+        } else {
+
+            return "Not selected";
+        }
     }
-    private String getAgeSelected(){
-        RadioGroup age = (RadioGroup)findViewById(R.id.ageGroupe);
-        int id = age.getCheckedRadioButtonId();
-        RadioButton ageSelected = (RadioButton) findViewById(id);
-        String strAge = (String) ageSelected.getText();
 
-        return strAge;
+    private String getAgeSelected() {
+        RadioGroup age = findViewById(R.id.ageGroupe);
+        int id = age.getCheckedRadioButtonId();
+
+        if (id != -1) {
+            RadioButton ageSelected = findViewById(id);
+            return ageSelected.getText().toString();
+        } else {
+            return "Not selected";
+        }
+    }
+
+    private String getActiviteSelected() {
+
+        RadioGroup activite = findViewById(R.id.activitegroupe);
+        int id = activite.getCheckedRadioButtonId();
+
+        if (id != -1) {
+            RadioButton activiteSelected = findViewById(id);
+            return activiteSelected.getText().toString();
+        } else {
+
+            return "Not selected";
+        }
     }
 
     @Override
@@ -49,7 +74,7 @@ public class Formulaire extends AppCompatActivity {
         Button btn_valider = (Button)findViewById(R.id.btn_valider);
 
         EditText ville = (EditText)findViewById(R.id.ville);
-
+        EditText txtDiplome = (EditText)findViewById(R.id.txtDiplome);
         TextView bjrView = (TextView) findViewById(R.id.bjrView);
         bjrView.setText(bjrView.getText() + " " + nom + " "+prenom);
 
@@ -61,17 +86,30 @@ public class Formulaire extends AppCompatActivity {
             public void onClick(View v) {
                 String gender = getGenderSelected();
                 String age = getAgeSelected();
+                String activite = getActiviteSelected();
                 String villeSelected = ville.getText().toString();
+                String diplome = txtDiplome.getText().toString();
+
 
                 try {
-                    PrintWriter file = new PrintWriter(outputFile);
-                    file.println("Gender : "+ gender);
-                    file.println("Age : "+ age);
-                    file.println("Ville : "+ villeSelected);
+
+                    if (!outputFile.exists()) {
+                        FileWriter fileWriter = new FileWriter(outputFile);
+                        PrintWriter file = new PrintWriter(fileWriter);
+                        file.println("Nom: " + nom + " " + prenom + "       Date : " + date + " " + time);
+                        file.close();
+                    }
+                    PrintWriter file = new PrintWriter(new FileWriter(outputFile, true));
+                    file.println(gender + ";" + age + ";" + villeSelected + ";" + activite + ";" + diplome);
+                    txtDiplome.setText(gender + ";" + age + ";" + villeSelected + ";" + activite + ";" + diplome);
                     file.close();
+
                     String filePath = outputFile.getAbsolutePath();
                     Toast.makeText(Formulaire.this, "Fichier enregistré : " + filePath, Toast.LENGTH_SHORT).show();
+
                 } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
+                } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
 
@@ -80,4 +118,3 @@ public class Formulaire extends AppCompatActivity {
 
     }
 }
-
