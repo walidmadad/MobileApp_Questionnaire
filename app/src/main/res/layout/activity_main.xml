@@ -50,9 +50,11 @@
                 android:id="@+id/textView"
                 android:layout_width="40dp"
                 android:layout_height="25dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="35dp"
                 android:layout_marginBottom="56dp"
-                android:text="Nom" />
+                android:text="Nom"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/txtPrenom"
@@ -75,8 +77,10 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
-                android:text="Prenom" />
+                android:text="Prenom"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/txtNom"
@@ -97,5 +101,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="193dp"
+        android:layout_height="207dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/santelogo_foreground"
+        tools:srcCompat="@mipmap/santelogo_foreground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Calendar calendar = Calendar.getInstance();
                 SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
-                SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
+                SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
 
                 String date = dateFormat.format(calendar.getTime());
                 String time = timeFormat.format(calendar.getTime());

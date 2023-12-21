@@ -413,7 +413,8 @@ public class Formulaire extends AppCompatActivity {
         bjrView.setText(bjrView.getText() + " " + nom + " "+prenom);
 
 
-        File outputFile = new File(getExternalFilesDir(null), nom + "_" + prenom + ".txt");
+        File outputFile = new File(getExternalFilesDir(null), nom + "_" + prenom + ".csv");
+
 
         btn_valider.setOnClickListener(new View.OnClickListener() {
             @Override

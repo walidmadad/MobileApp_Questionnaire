@@ -36,12 +36,20 @@
 
                 <TextView
                     android:id="@+id/bjrView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="125dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="26dp"
                     android:text="Bonjour "
                     android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    app:srcCompat="@mipmap/santelogo_foreground"
+                    tools:srcCompat="@mipmap/santelogo_foreground" />
 
 
             </LinearLayout>
