@@ -32,7 +32,7 @@ public class Formulaire extends AppCompatActivity {
             return genderSelected.getText().toString();
         } else {
 
-            return "Not selected";
+            return "";
         }
     }
 
@@ -44,7 +44,7 @@ public class Formulaire extends AppCompatActivity {
             RadioButton ageSelected = findViewById(id);
             return ageSelected.getText().toString();
         } else {
-            return "Not selected";
+            return "";
         }
     }
 
@@ -58,7 +58,55 @@ public class Formulaire extends AppCompatActivity {
             return activiteSelected.getText().toString();
         } else {
 
-            return "Not selected";
+            return "";
+        }
+    }
+    private String getAutreDiplome(){
+        RadioGroup autreDiplome = findViewById(R.id.autre_diplome);
+        int id = autreDiplome.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton AutreDiplomeSelected = findViewById(id);
+            return AutreDiplomeSelected.getText().toString();
+        }
+        else {
+            return "";
+        }
+    }
+    private String getDomaine(){
+        RadioGroup domaine = findViewById(R.id.domaine);
+        int id = domaine.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton domaineSelected = findViewById(id);
+            return domaineSelected.getText().toString();
+        }
+        else {
+            return "";
+        }
+    }
+    private String getPermis(){
+        RadioGroup permis = findViewById(R.id.permis);
+        int id = permis.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton permisSelected = findViewById(id);
+            return permisSelected.getText().toString();
+        }
+        else {
+            return "";
+        }
+    }
+    private String getVehicule(){
+        RadioGroup vehicule = findViewById(R.id.vehicule);
+        int id = vehicule.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton vehiculeSelected = findViewById(id);
+            return vehiculeSelected.getText().toString();
+        }
+        else {
+            return "";
         }
     }
 
@@ -76,6 +124,8 @@ public class Formulaire extends AppCompatActivity {
         EditText ville = (EditText)findViewById(R.id.ville);
         EditText txtDiplome = (EditText)findViewById(R.id.txtDiplome);
         TextView bjrView = (TextView) findViewById(R.id.bjrView);
+        EditText txtactivite_secteur = (EditText)findViewById(R.id.activite_secteur);
+        EditText txtautre_activite = (EditText)findViewById(R.id.autre_Activite);
         bjrView.setText(bjrView.getText() + " " + nom + " "+prenom);
 
 
@@ -89,8 +139,12 @@ public class Formulaire extends AppCompatActivity {
                 String activite = getActiviteSelected();
                 String villeSelected = ville.getText().toString();
                 String diplome = txtDiplome.getText().toString();
-
-
+                String autreDiplome = getAutreDiplome();
+                String domaine = getDomaine();
+                String autre_activite = txtautre_activite.getText().toString();
+                String activite_secteur = txtactivite_secteur.getText().toString();
+                String permis = getPermis();
+                String vehicule = getVehicule();
                 try {
 
                     if (!outputFile.exists()) {
@@ -100,8 +154,7 @@ public class Formulaire extends AppCompatActivity {
                         file.close();
                     }
                     PrintWriter file = new PrintWriter(new FileWriter(outputFile, true));
-                    file.println(gender + ";" + age + ";" + villeSelected + ";" + activite + ";" + diplome);
-                    txtDiplome.setText(gender + ";" + age + ";" + villeSelected + ";" + activite + ";" + diplome);
+                    file.println(gender + ";" + age + ";" + villeSelected + ";" + activite + ";" + diplome + ";" + autreDiplome + ";" + domaine + ";" + autre_activite + ";" + activite_secteur + ";" + permis + ";" + vehicule);
                     file.close();
 
                     String filePath = outputFile.getAbsolutePath();

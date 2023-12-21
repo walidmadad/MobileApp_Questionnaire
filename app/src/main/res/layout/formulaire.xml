@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".Formulaire">
 
     <ScrollView
@@ -72,24 +73,24 @@
                 android:id="@+id/genderGroupe"
                 android:layout_width="482dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginStart="240dp"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/Homme"
-                        android:layout_width="122dp"
-                        android:layout_height="49dp"
-                        android:layout_marginTop="28dp"
-                        android:layout_marginEnd="16dp"
-                        android:text="Homme" />
+                <RadioButton
+                    android:id="@+id/Homme"
+                    android:layout_width="122dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Homme" />
 
-                    <RadioButton
-                        android:id="@+id/Femme"
-                        android:layout_width="122dp"
-                        android:layout_height="49dp"
-                        android:layout_marginTop="28dp"
-                        android:text="Femme" />
+                <RadioButton
+                    android:id="@+id/Femme"
+                    android:layout_width="122dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="28dp"
+                    android:text="Femme" />
             </RadioGroup>
 
             <TextView
@@ -108,35 +109,34 @@
                 android:layout_marginStart="288dp"
                 android:layout_marginTop="20dp">
 
-                        <RadioButton
+                <RadioButton
 
-                            android:layout_width="138dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Entre 16 et 25 ans" />
+                    android:layout_width="138dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Entre 16 et 25 ans" />
 
-                        <RadioButton
+                <RadioButton
 
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Entre 26 et 35 ans" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Entre 26 et 35 ans" />
 
 
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Entre 36 et 45 ans" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Entre 36 et 45 ans" />
+                <RadioButton
 
-                        <RadioButton
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Entre 46 ans et plus " />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Entre 46 ans et plus " />
 
             </RadioGroup>
 
@@ -225,12 +225,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="150dp"
                 android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                android:text="6) Avez-vous d’autre diplôme ? (Autre que scolaire)" />
+                android:text="6) Avez-vous d’autre diplôme ? (Autre que scolaire)"
+                android:textSize="20sp" />
 
             <RadioGroup
-                android:layout_height="match_parent"
+                android:id="@+id/autre_diplome"
                 android:layout_width="452dp"
+                android:layout_height="match_parent"
                 android:layout_marginStart="288dp"
                 android:layout_marginTop="20dp">
 
@@ -252,8 +253,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:textSize="24sp"
-                android:text="II. Plus d’information " />
+                android:text="II. Plus d’information "
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -261,8 +262,134 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="150dp"
                 android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                android:text="7) Quel domaine d’activité vous intéresse ? " />
+                android:text="7) Quel domaine d’activité vous intéresse ? "
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/domaine"
+                android:layout_width="452dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="288dp"
+
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/radioButton9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Restauration" />
+
+                <RadioButton
+                    android:id="@+id/radioButton8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Animation" />
+
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vente / commerce" />
+
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hôtellerie" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Informatique" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Autre" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="si autre lequel" />
+
+                <EditText
+                    android:id="@+id/autre_Activite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="8) Quel secteur d’activité auriez-vous aimer découvrir lors de ce forum ?" />
+
+            <EditText
+                android:id="@+id/activite_secteur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9) Avez-vous le permis ?" />
+
+            <RadioGroup
+                android:id="@+id/permis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/oui3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Oui" />
+
+                <RadioButton
+                    android:id="@+id/non3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Non" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10) Si oui, avez-vous un véhicule ?" />
+
+            <RadioGroup
+                android:id="@+id/vehicule"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/oui2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Oui" />
+
+                <RadioButton
+                    android:id="@+id/non2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Non" />
+            </RadioGroup>
 
             <Button
                 android:id="@+id/btn_valider"
