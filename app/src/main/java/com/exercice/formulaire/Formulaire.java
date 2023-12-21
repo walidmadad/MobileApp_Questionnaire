@@ -110,6 +110,103 @@ public class Formulaire extends AppCompatActivity {
             return "";
         }
     }
+    private String getInformerForum(){
+        RadioGroup InformerForum = findViewById(R.id.informerForum);
+        int id = InformerForum.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton InformerSelected = findViewById(id);
+            return InformerSelected.getText().toString();
+        }
+        else {
+            return "";
+        }
+    }
+    private String getOffreInteresant(){
+        RadioGroup offreInteresant = findViewById(R.id.offreInteresant);
+        int id = offreInteresant.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton offreInteresantSelected = findViewById(id);
+            return offreInteresantSelected.getText().toString();
+        }
+        else {
+            return "";
+        }
+    }
+    private String getDeposeCV(){
+        RadioGroup deposeCV = findViewById(R.id.deposeCV);
+        int id = deposeCV.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton deposeCVSelected = findViewById(id);
+            return deposeCVSelected.getText().toString();
+        }
+        else {
+            return "";
+        }
+    }
+    private String getResultatObtenu(){
+        RadioGroup resultatObtenu = findViewById(R.id.resultatObtenu);
+        int id = resultatObtenu.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton resultatObtenuSelected = findViewById(id);
+            return resultatObtenuSelected.getText().toString();
+        }
+        else {
+            return "";
+        }
+    }
+    private String getDeplacer(){
+        RadioGroup deplacer = findViewById(R.id.deplacer);
+        int id = deplacer.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton deplacerSelected = findViewById(id);
+            return deplacerSelected.getText().toString();
+        }
+        else {
+            return "";
+        }
+    }
+    private String getOu(){
+        RadioGroup ou = findViewById(R.id.ou);
+        int id = ou.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton ouSelected = findViewById(id);
+            return ouSelected.getText().toString();
+        }
+        else {
+            return "";
+        }
+    }
+
+    private String getDistance(){
+        RadioGroup distance = findViewById(R.id.distance);
+        int id = distance.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton distanceSelected = findViewById(id);
+            return distanceSelected.getText().toString();
+        }
+        else {
+            return "";
+        }
+    }
+    private String getInteresantFacile(){
+        RadioGroup interesantFacile = findViewById(R.id.interesantFacile);
+        int id = interesantFacile.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton interesantFacileSelected = findViewById(id);
+            return interesantFacileSelected.getText().toString();
+        }
+        else {
+            return "";
+        }
+    }
     private void cleanGenderSelected() {
         RadioGroup gender = findViewById(R.id.genderGroupe);
         int id = gender.getCheckedRadioButtonId();
@@ -178,19 +275,103 @@ public class Formulaire extends AppCompatActivity {
             RadioButton vehiculeSelected = findViewById(id);
             vehiculeSelected.setChecked(false);
         }
+    }
+    private void cleanInformer(){
+        RadioGroup Informer = findViewById(R.id.informerForum);
+        int id = Informer.getCheckedRadioButtonId();
 
+        if( id != -1){
+            RadioButton InformerSelected = findViewById(id);
+            InformerSelected.setChecked(false);
+        }
+    }
+    private void cleanOffreInteresant(){
+        RadioGroup offreInteresant = findViewById(R.id.offreInteresant);
+        int id = offreInteresant.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton offreInteresantSelected = findViewById(id);
+            offreInteresantSelected.setChecked(false);
+        }
+
+    }
+    private void cleanDeposeCV(){
+        RadioGroup deposeCV = findViewById(R.id.deposeCV);
+        int id = deposeCV.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton deposeCVSelected = findViewById(id);
+            deposeCVSelected.setChecked(false);
+        }
+
+    }
+    private void cleanResultatObtenu(){
+        RadioGroup resultatObtenu = findViewById(R.id.resultatObtenu);
+        int id = resultatObtenu.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton resultatObtenuSelected = findViewById(id);
+            resultatObtenuSelected.setChecked(false);
+        }
+
+    }
+    private void cleanDeplacer(){
+        RadioGroup deplacer = findViewById(R.id.deplacer);
+        int id = deplacer.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton deplacerSelected = findViewById(id);
+            deplacerSelected.setChecked(false);
+        }
+
+    }
+    private void cleanOu(){
+        RadioGroup ou = findViewById(R.id.ou);
+        int id = ou.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton ouSelected = findViewById(id);
+            ouSelected.setChecked(false);
+        }
+    }
+    private void cleanDistance(){
+        RadioGroup distance = findViewById(R.id.distance);
+        int id = distance.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton distanceSelected = findViewById(id);
+            distanceSelected.setChecked(false);
+        }
+    }
+    private void cleanInteresantFacile(){
+        RadioGroup interesantFacile = findViewById(R.id.interesantFacile);
+        int id = interesantFacile.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton interesantFacileSelected = findViewById(id);
+            interesantFacileSelected.setChecked(false);
+        }
     }
     private void clean(){
         EditText ville = (EditText)findViewById(R.id.ville);
         EditText txtDiplome = (EditText)findViewById(R.id.txtDiplome);
         EditText txtactivite_secteur = (EditText)findViewById(R.id.activite_secteur);
         EditText txtautre_activite = (EditText)findViewById(R.id.autre_Activite);
-
+        EditText txtautreDiplome = (EditText)findViewById(R.id.autreDiplome);
+        EditText txtSiLyceen = (EditText)findViewById(R.id.SiLyceen);
+        EditText txtAutreForum = (EditText)findViewById(R.id.autre_InformerForum);
+        EditText txtEntreprise = (EditText)findViewById(R.id.entreprise);
+        EditText txtRemarques = (EditText)findViewById(R.id.remarques);
 
         ville.setText("");
         txtDiplome.setText("");
         txtactivite_secteur.setText("");
         txtautre_activite.setText("");
+        txtautreDiplome.setText("");
+        txtSiLyceen.setText("");
+        txtAutreForum.setText("");
+        txtEntreprise.setText("");
+        txtRemarques.setText("");
         cleanGenderSelected();
         cleanAgeSelected();
         cleanActiviteSelected();
@@ -198,8 +379,14 @@ public class Formulaire extends AppCompatActivity {
         cleanPermis();
         cleanVehicule();
         cleanDomaine();
-
-
+        cleanInformer();
+        cleanOffreInteresant();
+        cleanDeposeCV();
+        cleanResultatObtenu();
+        cleanDeplacer();
+        cleanOu();
+        cleanDistance();
+        cleanInteresantFacile();
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -214,9 +401,15 @@ public class Formulaire extends AppCompatActivity {
 
         EditText ville = (EditText)findViewById(R.id.ville);
         EditText txtDiplome = (EditText)findViewById(R.id.txtDiplome);
+        EditText txtautreDiplome = (EditText)findViewById(R.id.autreDiplome);
         TextView bjrView = (TextView) findViewById(R.id.bjrView);
         EditText txtactivite_secteur = (EditText)findViewById(R.id.activite_secteur);
         EditText txtautre_activite = (EditText)findViewById(R.id.autre_Activite);
+        EditText txtSiLyceen = (EditText)findViewById(R.id.SiLyceen);
+        EditText txtAutreForum = (EditText)findViewById(R.id.autre_InformerForum);
+        EditText txtEntreprise = (EditText)findViewById(R.id.entreprise);
+        EditText txtRemarques = (EditText)findViewById(R.id.remarques);
+
         bjrView.setText(bjrView.getText() + " " + nom + " "+prenom);
 
 
@@ -230,22 +423,37 @@ public class Formulaire extends AppCompatActivity {
                 String activite = getActiviteSelected();
                 String villeSelected = ville.getText().toString();
                 String diplome = txtDiplome.getText().toString();
+                String SiLyceen = txtSiLyceen.getText().toString();
                 String autreDiplome = getAutreDiplome();
                 String domaine = getDomaine();
                 String autre_activite = txtautre_activite.getText().toString();
                 String activite_secteur = txtactivite_secteur.getText().toString();
                 String permis = getPermis();
                 String vehicule = getVehicule();
+                String autreDiplometxt = txtautreDiplome.getText().toString();
+                String forumInformer = getInformerForum();
+                String autreForum = txtAutreForum.getText().toString();
+                String offreInteresant = getOffreInteresant();
+                String deposeCV = getDeposeCV();
+                String entreprise = txtEntreprise.getText().toString();
+                String resultatObtenu = getResultatObtenu();
+                String deplacer = getDeplacer();
+                String ou = getOu();
+                String distance = getDistance();
+                String interesantFacile = getInteresantFacile();
+                String remarques = txtRemarques.getText().toString();
+
                 try {
 
                     if (!outputFile.exists()) {
                         FileWriter fileWriter = new FileWriter(outputFile);
                         PrintWriter file = new PrintWriter(fileWriter);
                         file.println("Nom: " + nom + " " + prenom + "       Date : " + date + " " + time);
+                        file.println("Genre;Age;Ville;Activité;Si Lycéen niveau;Dernier Diplôme;Autre diplôme;Quel Diplôme si oui;Comment avez-vous été informer de forum;Si autre lequel?;Domaine d’activité vous intéresse;autre secteur;secteur d’activité auriez-vous aimer découvrir;offres intéressantes;CV déposé;Si oui quell entreprise;Aves-vous obtenue?;Permis;Véhicules;Prés déplacer?;Si oui où?;Quelle Distance;Avez-vous trouvé facilement les stands qui vous intéressaient;Remarques sur Forum ou l'organisation");
                         file.close();
                     }
                     PrintWriter file = new PrintWriter(new FileWriter(outputFile, true));
-                    file.println(gender + ";" + age + ";" + villeSelected + ";" + activite + ";" + diplome + ";" + autreDiplome + ";" + domaine + ";" + autre_activite + ";" + activite_secteur + ";" + permis + ";" + vehicule);
+                    file.println(gender + ";" + age + ";" + villeSelected + ";" + activite + ";" + diplome+";"+ SiLyceen + ";" + autreDiplome + ";" + autreDiplometxt + ";" + forumInformer + ";" + autreForum + ";" + domaine + ";" + autre_activite + ";" + activite_secteur + ";" + offreInteresant + ";" + deposeCV + ";" + entreprise + ";" + resultatObtenu + ";" + permis + ";" + vehicule + ";" + deplacer + ";" + ou + ";" + distance + ";" + interesantFacile + ";" + remarques);
                     file.close();
 
                     String filePath = outputFile.getAbsolutePath();

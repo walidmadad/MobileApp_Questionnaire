@@ -71,7 +71,7 @@
                 android:layout_marginTop="30dp"
                 android:textAlignment="center"
                 android:text="I. Mieux vous connaitre "
-                android:textSize="24sp" />
+                android:textSize="28sp" />
 
 
             <TextView
@@ -79,10 +79,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_marginTop="50dp"
-                android:layout_marginEnd="150dp"
                 android:text="1) Êtes-vous :"
+                android:textAlignment="center"
                 android:textSize="20sp" />
 
             <RadioGroup
@@ -115,10 +114,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="31dp"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_marginTop="50dp"
-                android:layout_marginRight="150dp"
                 android:text="2) Dans quelle tranche d’âge vous situez vous ?"
+                android:textAlignment="center"
                 android:textSize="20sp" />
 
             <RadioGroup
@@ -131,7 +129,7 @@
 
                 <RadioButton
 
-                    android:layout_width="138dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Entre 16 et 25 ans" />
@@ -173,7 +171,7 @@
 
             <EditText
                 android:id="@+id/ville"
-                android:layout_width="561dp"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -187,7 +185,7 @@
                 android:layout_gravity="center"
                 android:textAlignment="center"
                 android:layout_marginTop="50dp"
-                android:text="4) Quelle est votre activité ? "
+                android:text="4) a) Quelle est votre activité ? "
                 android:textSize="20sp" />
 
             <RadioGroup
@@ -224,6 +222,23 @@
 
             </RadioGroup>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="b) Si Lycéen, quelle est votre niveau  ? "
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/SiLyceen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="18sp" />
+
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
@@ -236,7 +251,7 @@
 
             <EditText
                 android:id="@+id/txtDiplome"
-                android:layout_width="564dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -271,23 +286,121 @@
                     android:layout_height="wrap_content"
                     android:text="Non" />
             </RadioGroup>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
 
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Si oui, précisez : "
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/autreDiplome"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="18sp" />
+            </LinearLayout>
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:textAlignment="center"
                 android:text="II. Plus d’information "
-                android:textSize="24sp" />
+                android:textSize="28sp" />
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:text="7) Comment avez-vous été informé du forum Jobs Saisonnier ? "
+                android:textSize="20sp" />
+            <RadioGroup
+                android:id="@+id/informerForum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
 
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/radioButton17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Internet" />
+
+                <RadioButton
+                    android:id="@+id/radioButton18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Réseaux sociaux" />
+
+                <RadioButton
+                    android:id="@+id/radioButton19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Affiche" />
+
+                <RadioButton
+                    android:id="@+id/radioButton20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Entourage" />
+
+                <RadioButton
+                    android:id="@+id/radioButton21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Presse" />
+
+                <RadioButton
+                    android:id="@+id/radioButton22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Autre" />
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="si autre lequel"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/autre_InformerForum"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="18sp" />
+            </LinearLayout>
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
-                android:text="7) Quel domaine d’activité vous intéresse ? "
+                android:text="8) Quel domaine d’activité vous intéresse ? "
                 android:textSize="20sp" />
+
 
             <RadioGroup
                 android:id="@+id/domaine"
@@ -364,12 +477,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
-                android:text="8) Quel secteur d’activité auriez-vous aimer découvrir lors de ce forum ?"
+                android:text="9) Quel secteur d’activité auriez-vous aimer découvrir lors de ce forum ?"
                 android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/activite_secteur"
-                android:layout_width="564dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -377,6 +490,124 @@
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:textSize="20sp" />
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:text="10) Avez-vous trouvé, lors de ce forum, des offres intéressantes ?"
+                android:textSize="20sp" />
+            <RadioGroup
+                android:id="@+id/offreInteresant"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/oui4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:text="Oui" />
+
+                <RadioButton
+                    android:id="@+id/non4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Non" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:text="11) Avez-vous déposé un ou plusieurs CV ?"
+                android:textSize="20sp" />
+            <RadioGroup
+                android:id="@+id/deposeCV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/oui5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:text="Oui" />
+
+                <RadioButton
+                    android:id="@+id/non5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Non" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si oui, quelle entreprise ?"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/entreprise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginTop="50dp"
+                android:text="12) Avez-vous obtenu ?"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/resultatObtenu"
+                android:layout_width="119dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Des Informations" />
+
+                <RadioButton
+                    android:id="@+id/Rdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Un rendez-vous" />
+
+                <RadioButton
+                    android:id="@+id/job"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Un Job" />
+
+            </RadioGroup>
 
             <TextView
                 android:id="@+id/textView15"
@@ -384,7 +615,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
-                android:text="9) Avez-vous le permis ?"
+                android:text="13) Avez-vous le permis ?"
                 android:textSize="20sp" />
 
             <RadioGroup
@@ -414,7 +645,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
                 android:textSize="20sp"
-                android:text="10) Si oui, avez-vous un véhicule ?" />
+                android:text="14) Si oui, avez-vous un véhicule ?" />
 
             <RadioGroup
                 android:id="@+id/vehicule"
@@ -437,7 +668,152 @@
                     android:layout_height="wrap_content"
                     android:text="Non" />
             </RadioGroup>
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textSize="20sp"
+                android:text="15) a) Etes-vous prêt à vous déplacer" />
 
+            <RadioGroup
+                android:id="@+id/deplacer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/oui6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:text="Oui" />
+
+                <RadioButton
+                    android:id="@+id/non6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Non" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textSize="20sp"
+                android:text="b) Si oui " />
+
+            <RadioGroup
+                android:id="@+id/ou"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/france"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:text="En France" />
+
+                <RadioButton
+                    android:id="@+id/hautsFrance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dans la région des Hauts de France" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textSize="20sp"
+                android:text="c) Vous êtes prêt à vous déplacer à " />
+
+            <RadioGroup
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/moins30km"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:text="30km ou moins" />
+
+                <RadioButton
+                    android:id="@+id/a100km"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jusque 100km" />
+                <RadioButton
+                    android:id="@+id/plus100km"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Plus de 100km" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textSize="20sp"
+                android:text="16) Avez-vous trouvé facilement les stands qui vous intéressaient ?" />
+
+            <RadioGroup
+                android:id="@+id/interesantFacile"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/oui7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:text="Oui" />
+
+                <RadioButton
+                    android:id="@+id/non7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Non" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:text="17) Avez- vous des remarques particulières à nous faire part afin d’améliorer l’organisation de forum ou
+autre ? "
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/remarques"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:textSize="20sp" />
             <Button
                 android:id="@+id/btn_valider"
                 android:layout_width="wrap_content"
@@ -456,7 +832,8 @@
 
                 android:layout_marginTop="44dp"
                 android:layout_marginBottom="100dp"
-                android:text="Changer Utilisateur" />
+                android:text="Changer Utilisateur"
+                app:rippleColor="#732D2D" />
 
         </LinearLayout>
     </ScrollView>
