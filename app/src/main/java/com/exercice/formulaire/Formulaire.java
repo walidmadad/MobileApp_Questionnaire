@@ -1,6 +1,7 @@
 package com.exercice.formulaire;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -109,7 +110,97 @@ public class Formulaire extends AppCompatActivity {
             return "";
         }
     }
+    private void cleanGenderSelected() {
+        RadioGroup gender = findViewById(R.id.genderGroupe);
+        int id = gender.getCheckedRadioButtonId();
 
+        if (id != -1) {
+            RadioButton genderSelected = findViewById(id);
+            genderSelected.setChecked(false);
+        }
+    }
+
+    private void cleanAgeSelected() {
+        RadioGroup age = findViewById(R.id.ageGroupe);
+        int id = age.getCheckedRadioButtonId();
+
+        if (id != -1) {
+            RadioButton ageSelected = findViewById(id);
+            ageSelected.setChecked(false);
+        }
+    }
+
+    private void cleanActiviteSelected() {
+
+        RadioGroup activite = findViewById(R.id.activitegroupe);
+        int id = activite.getCheckedRadioButtonId();
+
+        if (id != -1) {
+            RadioButton activiteSelected = findViewById(id);
+            activiteSelected.setChecked(false);
+        }
+    }
+    private void cleanAutreDiplome(){
+        RadioGroup autreDiplome = findViewById(R.id.autre_diplome);
+        int id = autreDiplome.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton AutreDiplomeSelected = findViewById(id);
+            AutreDiplomeSelected.setChecked(false);
+        }
+
+    }
+    private void cleanDomaine(){
+        RadioGroup domaine = findViewById(R.id.domaine);
+        int id = domaine.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton domaineSelected = findViewById(id);
+            domaineSelected.setChecked(false);
+        }
+
+    }
+    private void cleanPermis(){
+        RadioGroup permis = findViewById(R.id.permis);
+        int id = permis.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton permisSelected = findViewById(id);
+            permisSelected.setChecked(false);
+        }
+
+    }
+    private void cleanVehicule(){
+        RadioGroup vehicule = findViewById(R.id.vehicule);
+        int id = vehicule.getCheckedRadioButtonId();
+
+        if( id != -1){
+            RadioButton vehiculeSelected = findViewById(id);
+            vehiculeSelected.setChecked(false);
+        }
+
+    }
+    private void clean(){
+        EditText ville = (EditText)findViewById(R.id.ville);
+        EditText txtDiplome = (EditText)findViewById(R.id.txtDiplome);
+        EditText txtactivite_secteur = (EditText)findViewById(R.id.activite_secteur);
+        EditText txtautre_activite = (EditText)findViewById(R.id.autre_Activite);
+
+
+        ville.setText("");
+        txtDiplome.setText("");
+        txtactivite_secteur.setText("");
+        txtautre_activite.setText("");
+        cleanGenderSelected();
+        cleanAgeSelected();
+        cleanActiviteSelected();
+        cleanAutreDiplome();
+        cleanPermis();
+        cleanVehicule();
+        cleanDomaine();
+
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -165,9 +256,16 @@ public class Formulaire extends AppCompatActivity {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-
+                clean();
             }
         });
-
+        Button btn_changer = (Button) findViewById(R.id.changer);
+        btn_changer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentUser = new Intent(Formulaire.this, MainActivity.class);
+                startActivity(intentUser);
+            }
+        });
     }
 }

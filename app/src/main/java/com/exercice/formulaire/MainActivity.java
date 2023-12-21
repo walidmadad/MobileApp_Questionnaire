@@ -39,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
                 String date = dateFormat.format(calendar.getTime());
                 String time = timeFormat.format(calendar.getTime());
 
-                Intent intent = new Intent(MainActivity.this, Formulaire.class);
-                intent.putExtra("nom", unNom);
-                intent.putExtra("prenom", unPrenom);
-                intent.putExtra("date", date);
-                intent.putExtra("time", time);
-                startActivity(intent);
+                Intent intentFormulaire = new Intent(MainActivity.this, Formulaire.class);
+                intentFormulaire.putExtra("nom", unNom);
+                intentFormulaire.putExtra("prenom", unPrenom);
+                intentFormulaire.putExtra("date", date);
+                intentFormulaire.putExtra("time", time);
+                startActivity(intentFormulaire);
             }
         });
     }
