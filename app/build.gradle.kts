@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId = "com.exercice.formulaire"
         minSdk = 23
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 

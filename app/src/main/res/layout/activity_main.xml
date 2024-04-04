@@ -13,7 +13,7 @@
         android:layout_marginTop="152dp"
         android:text="Authentification"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtNom"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -100,7 +100,7 @@
         android:layout_height="199dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher_foreground" />
+        app:srcCompat="@mipmap/btsforeground" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -112,7 +112,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/santelogo_foreground"
-        tools:srcCompat="@mipmap/santelogo_foreground" />
+        app:srcCompat="@mipmap/logo_jobs_saisonniers_foreground"
+        tools:srcCompat="@mipmap/logo_jobs_saisonniers_foreground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

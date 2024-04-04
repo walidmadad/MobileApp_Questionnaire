@@ -8,13 +8,15 @@
     tools:context=".Formulaire">
 
     <ScrollView
+        android:id="@+id/scrollViewform"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,14 +31,14 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@mipmap/ic_launcher_foreground"
-                    tools:srcCompat="@mipmap/ic_launcher_foreground" />
+                    android:layout_width="89dp"
+                    android:layout_height="68dp"
+                    app:srcCompat="@mipmap/btsforeground"
+                    tools:srcCompat="@mipmap/btsforeground" />
 
                 <TextView
                     android:id="@+id/bjrView"
-                    android:layout_width="125dp"
+                    android:layout_width="188dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="26dp"
@@ -45,11 +47,11 @@
 
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="match_parent"
+                    android:layout_width="118dp"
                     android:layout_height="match_parent"
 
-                    app:srcCompat="@mipmap/santelogo_foreground"
-                    tools:srcCompat="@mipmap/santelogo_foreground" />
+                    app:srcCompat="@mipmap/logo_jobs_saisonniers_foreground"
+                    tools:srcCompat="@mipmap/logo_jobs_saisonniers_foreground" />
 
 
             </LinearLayout>
@@ -77,8 +79,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:textAlignment="center"
                 android:text="I. Mieux vous connaitre "
+                android:textAlignment="center"
                 android:textSize="28sp" />
 
 
@@ -132,8 +134,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                >
+                android:layout_marginTop="20dp">
 
                 <RadioButton
 
@@ -171,10 +172,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_marginTop="50dp"
-
                 android:text="3) Dans quelle ville vous vous situez"
+
+                android:textAlignment="center"
                 android:textSize="20sp" />
 
             <EditText
@@ -191,9 +192,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_marginTop="50dp"
                 android:text="4) a) Quelle est votre activité ? "
+                android:textAlignment="center"
                 android:textSize="20sp" />
 
             <RadioGroup
@@ -230,31 +231,31 @@
 
             </RadioGroup>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="b) Si Lycéen, quelle est votre niveau  ? "
-                    android:textSize="18sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="b) Si Lycéen, quelle est votre niveau  ? "
+                android:textSize="18sp" />
 
-                <EditText
-                    android:id="@+id/SiLyceen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:textSize="18sp" />
+            <EditText
+                android:id="@+id/SiLyceen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_marginTop="50dp"
                 android:text="5) Quel est votre dernier diplôme obtenu ?"
+                android:textAlignment="center"
                 android:textSize="20sp" />
 
             <EditText
@@ -294,6 +295,7 @@
                     android:layout_height="wrap_content"
                     android:text="Non" />
             </RadioGroup>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -317,22 +319,25 @@
                     android:inputType="text"
                     android:textSize="18sp" />
             </LinearLayout>
+
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:textAlignment="center"
                 android:text="II. Plus d’information "
+                android:textAlignment="center"
                 android:textSize="28sp" />
+
             <TextView
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
-                android:text="7) Comment avez-vous été informé du forum Jobs Saisonnier ? "
+                android:text="7) Comment avez-vous été informé du Forum Jobs Saisonniers ? "
                 android:textSize="20sp" />
+
             <RadioGroup
                 android:id="@+id/informerForum"
                 android:layout_width="wrap_content"
@@ -377,6 +382,7 @@
                     android:layout_height="wrap_content"
                     android:text="Autre" />
             </RadioGroup>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -400,6 +406,7 @@
                     android:inputType="text"
                     android:textSize="18sp" />
             </LinearLayout>
+
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
@@ -498,6 +505,7 @@
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:textSize="20sp" />
+
             <TextView
                 android:id="@+id/textView25"
                 android:layout_width="wrap_content"
@@ -506,6 +514,7 @@
                 android:layout_marginTop="50dp"
                 android:text="10) Avez-vous trouvé, lors de ce forum, des offres intéressantes ?"
                 android:textSize="20sp" />
+
             <RadioGroup
                 android:id="@+id/offreInteresant"
                 android:layout_width="wrap_content"
@@ -527,6 +536,7 @@
                     android:layout_height="wrap_content"
                     android:text="Non" />
             </RadioGroup>
+
             <TextView
                 android:id="@+id/textView26"
                 android:layout_width="wrap_content"
@@ -535,6 +545,7 @@
                 android:layout_marginTop="50dp"
                 android:text="11) Avez-vous déposé un ou plusieurs CV ?"
                 android:textSize="20sp" />
+
             <RadioGroup
                 android:id="@+id/deposeCV"
                 android:layout_width="wrap_content"
@@ -580,19 +591,20 @@
                     android:inputType="text"
                     android:textSize="18sp" />
             </LinearLayout>
+
             <TextView
                 android:id="@+id/textView27"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
                 android:layout_marginTop="50dp"
                 android:text="12) Avez-vous obtenu ?"
+                android:textAlignment="center"
                 android:textSize="20sp" />
 
             <RadioGroup
                 android:id="@+id/resultatObtenu"
-                android:layout_width="119dp"
+                android:layout_width="197dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp">
@@ -652,8 +664,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                android:text="14) Si oui, avez-vous un véhicule ?" />
+                android:text="14) Si oui, avez-vous un véhicule ?"
+                android:textSize="20sp" />
 
             <RadioGroup
                 android:id="@+id/vehicule"
@@ -676,14 +688,15 @@
                     android:layout_height="wrap_content"
                     android:text="Non" />
             </RadioGroup>
+
             <TextView
                 android:id="@+id/textView28"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                android:text="15) a) Etes-vous prêt à vous déplacer" />
+                android:text="15) a) Etes-vous prêt à vous déplacer"
+                android:textSize="20sp" />
 
             <RadioGroup
                 android:id="@+id/deplacer"
@@ -706,14 +719,15 @@
                     android:layout_height="wrap_content"
                     android:text="Non" />
             </RadioGroup>
+
             <TextView
                 android:id="@+id/textView29"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                android:text="b) Si oui " />
+                android:text="b) Si oui "
+                android:textSize="20sp" />
 
             <RadioGroup
                 android:id="@+id/ou"
@@ -736,14 +750,15 @@
                     android:layout_height="wrap_content"
                     android:text="Dans la région des Hauts de France" />
             </RadioGroup>
+
             <TextView
                 android:id="@+id/textView30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                android:text="c) Vous êtes prêt à vous déplacer à " />
+                android:text="c) Vous êtes prêt à vous déplacer à "
+                android:textSize="20sp" />
 
             <RadioGroup
                 android:id="@+id/distance"
@@ -765,20 +780,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Jusque 100km" />
+
                 <RadioButton
                     android:id="@+id/plus100km"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Plus de 100km" />
             </RadioGroup>
+
             <TextView
                 android:id="@+id/textView31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
-                android:textSize="20sp"
-                android:text="16) Avez-vous trouvé facilement les stands qui vous intéressaient ?" />
+                android:text="16) Avez-vous trouvé facilement les stands qui vous intéressaient ?"
+                android:textSize="20sp" />
 
             <RadioGroup
                 android:id="@+id/interesantFacile"
@@ -822,6 +839,7 @@ autre ? "
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:textSize="20sp" />
+
             <Button
                 android:id="@+id/btn_valider"
                 android:layout_width="wrap_content"
@@ -830,7 +848,7 @@ autre ? "
 
                 android:layout_marginTop="44dp"
                 android:layout_marginBottom="40dp"
-                android:text="Valider" />
+                android:text="Valider et intégrer une nouvelle personne " />
 
             <Button
                 android:id="@+id/changer"
